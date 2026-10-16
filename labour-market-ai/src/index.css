@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #FAF8F5;
+    color: #18181b;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+}
+
+/* 3D Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Neo-brutalist custom utilities */
+.neo-box {
+  background-color: #FAF8F5;
+  border: 2px solid #18181b;
+  box-shadow: 4px 4px 0px #18181b;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neo-box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #18181b;
+}
+
+.neo-btn {
+  border: 2px solid #18181b;
+  box-shadow: 3px 3px 0px #18181b;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.neo-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #18181b;
+}
+
+.neo-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #18181b;
+}
+
+/* Glowing animated bar */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.6), 0 0 20px rgba(244, 63, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(124, 58, 237, 0.9), 0 0 30px rgba(251, 191, 36, 0.6);
+  }
+}
+
+.glow-bar {
+  animation: pulseGlow 2.5s infinite alternate ease-in-out;
+}
